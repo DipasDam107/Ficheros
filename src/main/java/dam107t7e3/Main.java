@@ -4,7 +4,6 @@
  */
 package dam107t7e3;
 
-import dam107t7e2.*;
 import java.io.*;
 
 public class Main {
