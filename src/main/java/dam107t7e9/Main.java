@@ -17,7 +17,7 @@ public class Main {
          
          LocalDate fecNac;
          String nombre;
-         float nota1, nota2, nota3;
+         double nota1, nota2, nota3;
          Scanner teclado = new Scanner(System.in);
          String separador = System.getProperty("file.separator");
          String ruta = "." + separador + "src" + separador + "main" + separador + "java" + separador + "archivos" + separador + "alumnos.txt";
@@ -53,7 +53,7 @@ public class Main {
             } while (!nombre.toUpperCase().equals("Z"));
           }
           catch(Exception e){
-          
+              System.out.println(e.getMessage());
           }
      }
 }
