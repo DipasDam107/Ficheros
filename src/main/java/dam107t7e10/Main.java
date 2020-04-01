@@ -16,7 +16,7 @@ public class Main {
         String ruta = "." + separador + "src" + separador + "main" + separador + "java" + separador + "archivos" + separador + "alumnos.txt";
         String cadena;
         String nombreNota="Ninguno";
-        int mediaAlta=0;
+        int mediaAlta=0, aprobados=0;
          try(FileReader fr = new FileReader(ruta); BufferedReader bfr = new BufferedReader(fr)){
                 while((cadena=bfr.readLine()) != null){
                     float nota1, nota2, nota3;
@@ -36,9 +36,12 @@ public class Main {
                     System.out.println("Media = " + media);
                     if(media>mediaAlta)
                         nombreNota=nombre;
+                    if(media>=5)
+                        aprobados++;
                 }
                 System.out.println("--------------------------------------------");
                 System.out.println("La nota media mas alta es la de " + nombreNota);
+                System.out.println("Aprobados: " + aprobados);
          }catch(Exception e){
              e.printStackTrace();
              System.out.println(e.getMessage());
