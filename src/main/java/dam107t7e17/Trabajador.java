@@ -1,9 +1,10 @@
 package dam107t7e17;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 
 
-public class Trabajador {
+public abstract class Trabajador implements Serializable{
 	private int id;
 	private String nombre;
 	private LocalDate fecNac;

@@ -18,8 +18,8 @@ public class MovilPlus extends cMovilPrepago{
     
     @Override
     public boolean equals(Object movil){
-        if(movil instanceof movilPlus)
-             if(((movilPlus)movil).numeroMovil==this.numeroMovil) return true;
+        if(movil instanceof MovilPlus)
+             if(((MovilPlus)movil).numeroMovil==this.numeroMovil) return true;
              else return false;
         else return false;
     }
