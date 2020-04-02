@@ -1,4 +1,6 @@
-package dam107t7e19;
+package dam107t7e20;
+
+import dam107t7e19.*;
 
 public class cMovilPrepago {
     public long numeroMovil;
