@@ -57,10 +57,10 @@ public class Main {
     public static void leerTemp(LocalDate fecha) {
         System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n");
         int pos = (int)ChronoUnit.DAYS.between(LocalDate.of(anio, 1, 1), fecha);
-        int TAM_REGISTRO = 14;
+        int TAM_REGISTRO = 12;
         try (RandomAccessFile raf = new RandomAccessFile(ruta, "r");) {
             raf.seek(pos * TAM_REGISTRO);
-            byte[] modeloArray = new byte[10];
+            byte[] modeloArray = new byte[8];
             raf.read(modeloArray);
             String nombre = new String(modeloArray);
             System.out.println("Dia: " +  LocalDate.parse(nombre.trim(), DateTimeFormatter.ofPattern("yyyyMMdd")));
